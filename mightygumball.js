@@ -11,25 +11,6 @@ function init() {
 }
 
 //
-// This function is written using XMLHttpRequest Level 1, so if you're
-// using IE or Opera, or a really old version of Safari, Firefox or
-// Chrome, you can use this instead of Level 2 (below).
-//
-function getSales_XHRv1() {
-	// change the URL to match the location where you
-	// put the sales.json file
-    var url = "http://gumball.wickedlysmart.com";
-	var request = new XMLHttpRequest();
-	request.open("GET", url);
-	request.onreadystatechange = function() {
-		if (request.readyState == 4 && request.status == 200) {
-			updateSales(request.responseText);
-		}
-	};
-	request.send(null);
-}
-
-//
 // With XMLHttpRequest Level 2 (implemented in new versions of Firefox, Safari
 // and Chrome) you can check progress and check for the "load" event with the
 // onload event handler instead of checking the onreadystatechange
@@ -37,7 +18,7 @@ function getSales_XHRv1() {
 function getSales() {
 	// change the URL to match the location where you
 	// put the sales.json file
-    var url = "http://gumball.wickedlysmart.com";
+    	var url = "http://gumball.wickedlysmart.com";
 	var request = new XMLHttpRequest();
 	request.open("GET", url);
 	request.onload = function() {
