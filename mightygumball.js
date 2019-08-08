@@ -18,7 +18,7 @@ function init() {
 function getSales() {
 	// change the URL to match the location where you
 	// put the sales.json file
-    	var url = "http://gumball.wickedlysmart.com";
+    	var url = "https://gumball.wickedlysmart.com";
 	var request = new XMLHttpRequest();
 	request.open("GET", url);
 	request.onload = function() {
